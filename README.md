@@ -82,7 +82,7 @@ working
 
 您已經具備有效的 .template.config/template.json 檔案，現在您的範本已經準備好並可供安裝。 在您的終端機中，瀏覽至 extensions 資料夾，並執行下列命令以安裝位於目前資料夾中的範本：
 
-在 Windows： `dotnet new --install .\\`
+在 Windows： `dotnet new --install .\`
 在 Linux MacOS 上： `dotnet new --install ./`
 此命令會輸出已安裝範本的清單，其中應該會包含您的範本。
 
@@ -140,7 +140,7 @@ Console.WriteLine("Hello World!".Reverse());
 
 將終端機移動至 extensions（建立範本的地方） 目錄底下並執行下列命令，以卸載位於目前資料夾的範本：
 
-- 在 Windows：`dotnet new --uninstall .\\`
+- 在 Windows：`dotnet new --uninstall .\`
 - 在 Linux 或 `MacOS 上： dotnet new --uninstall ./`
 此命令會輸出已卸載的範本清單。
 ```
@@ -235,7 +235,7 @@ consoleasync內的template.json設定檔：
 
 當已經寫完設定檔之後，即可準備安裝範本，在安裝前先確認將不需要的檔案刪除（/bin /obj），接著將終端機移動至consoleasync資料夾中，並執行指令安裝範本。
 
-- 在 Windows： `dotnet new --install .\\`
+- 在 Windows： `dotnet new --install .\`
 - 在 Linux MacOS 上： `dotnet new --install ./`
 此命令會輸出已安裝範本的清單，其中應該會包含您的範本。
 ```bash=
@@ -274,7 +274,7 @@ Hello World with C# 10.0!
 ```
 ### 解除安裝範本
 將終端機中移動至consoleasync資料夾，然後執行下列命令卸載範本：
-- 在 Windows： `dotnet new --uninstall .\\`
+- 在 Windows： `dotnet new --uninstall .\`
 - 在 Linux MacOS 上： `dotnet new --uninstall ./`
 
 ```
