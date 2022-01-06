@@ -82,8 +82,8 @@ working
 
 您已經具備有效的 .template.config/template.json 檔案，現在您的範本已經準備好並可供安裝。 在您的終端機中，瀏覽至 extensions 資料夾，並執行下列命令以安裝位於目前資料夾中的範本：
 
-在 Windows： *dotnet new --install .\\*
-在 Linux MacOS 上： *dotnet new --install ./*
+在 Windows： `dotnet new --install .\\`
+在 Linux MacOS 上： `dotnet new --install ./`
 此命令會輸出已安裝範本的清單，其中應該會包含您的範本。
 
 ```
@@ -97,7 +97,7 @@ Example templates: string extensions  stringext  [C#]  Common/Code
 ```
 
 ### 測試項目範本
-到test的目錄底下，並使用 *dotnet new console* 建立新的主控台應用程式。
+到test的目錄底下，並使用 `dotnet new console` 建立新的主控台應用程式。
 ```bash=
 dotnet new console
 ```
@@ -110,7 +110,7 @@ Running 'dotnet restore' on C:\test\test.csproj...
 
 Restore succeeded.
 ```
-使用 *dotnet run* 執行專案。
+使用 `dotnet run` 執行專案。
 ```bash=
 dotnet run
 ```
@@ -118,7 +118,7 @@ dotnet run
 ```
 Hello World!
 ```
-使用 *dotnet new stringext* 從產出CommonExtensions.cs。
+使用 `dotnet new stringext` 從產出CommonExtensions.cs。
 ```bash=
 dotnet new stringext
 ```
@@ -140,17 +140,17 @@ Console.WriteLine("Hello World!".Reverse());
 
 將終端機移動至 extensions（建立範本的地方） 目錄底下並執行下列命令，以卸載位於目前資料夾的範本：
 
-- 在 Windows：*dotnet new --uninstall .\\*
-- 在 Linux 或 *MacOS 上： dotnet new --uninstall ./*
+- 在 Windows：`dotnet new --uninstall .\\`
+- 在 Linux 或 `MacOS 上： dotnet new --uninstall ./`
 此命令會輸出已卸載的範本清單。
 ```
 Success: <root path>\working\templates\extensions was uninstalled.
 ```
-可以使用 *dotnet new --uninstall* 來查看已安裝的範本套件清單，包括每個範本封裝的命令以將其卸載。
+可以使用 `dotnet new --uninstall` 來查看已安裝的範本套件清單，包括每個範本封裝的命令以將其卸載。
 
 ## 建立專案範本
 
-將終端機移到至 *working/templates* 資料夾，並建立 consoleasync 的新子資料夾。進入該資料夾後，執行 *dotnet new console* 產出標準主控台應用程式，從此範本開始調整。
+將終端機移到至 *working/templates* 資料夾，並建立 consoleasync 的新子資料夾。進入該資料夾後，執行 `dotnet new console` 產出標準主控台應用程式，從此範本開始調整。
 
 ```bash=
 dotnet new console
@@ -229,14 +229,14 @@ consoleasync內的template.json設定檔：
   }
 }
 ```
-此設定檔會包含範本的所有設定。 可以看見基本設定 (例如 *name* 和 *shortName*)，但還有設定為 project 的 *tags/type* 值。 這會將您的範本指定為專案範本。 您可以建立的範本類型本身並無限制。 item和 project 值是 .net 建議的通用名稱，讓使用者可以輕鬆地篩選其所搜尋的範本類型。
+此設定檔會包含範本的所有設定。 可以看見基本設定 (例如 `name` 和 `shortName`)，但還有設定為 project 的 `tags/type` 值。 這會將您的範本指定為專案範本。 您可以建立的範本類型本身並無限制。 item和 project 值是 .net 建議的通用名稱，讓使用者可以輕鬆地篩選其所搜尋的範本類型。
 
-*classifications* 項目代表您執行 dotnet new 並取得範本清單時所會看見的 [標籤] 欄。 使用者也可以根據分類標籤搜尋。 不要將 JSON 檔案中的 tags 屬性與 classifications 標籤清單混淆在一起。 它們是不同的東西，但不幸地具有類似的名稱。
+`classifications` 項目代表您執行 dotnet new 並取得範本清單時所會看見的 [標籤] 欄。 使用者也可以根據分類標籤搜尋。 不要將 JSON 檔案中的 tags 屬性與 classifications 標籤清單混淆在一起。 它們是不同的東西，但不幸地具有類似的名稱。
 
 當已經寫完設定檔之後，即可準備安裝範本，在安裝前先確認將不需要的檔案刪除（/bin /obj），接著將終端機移動至consoleasync資料夾中，並執行指令安裝範本。
 
-- 在 Windows： *dotnet new --install .\\*
-- 在 Linux MacOS 上： *dotnet new --install ./*
+- 在 Windows： `dotnet new --install .\\`
+- 在 Linux MacOS 上： `dotnet new --install ./`
 此命令會輸出已安裝範本的清單，其中應該會包含您的範本。
 ```bash=
 dotnet new --install .\
@@ -274,8 +274,8 @@ Hello World with C# 10.0!
 ```
 ### 解除安裝範本
 將終端機中移動至consoleasync資料夾，然後執行下列命令卸載範本：
-- 在 Windows： *dotnet new --uninstall .\\*
-- 在 Linux MacOS 上： *dotnet new --uninstall ./*
+- 在 Windows： `dotnet new --uninstall .\\`
+- 在 Linux MacOS 上： `dotnet new --uninstall ./`
 
 ```
 Success: <root path>\working\templates\consoleasync was uninstalled.
@@ -296,7 +296,7 @@ Success: <root path>\working\templates\consoleasync was uninstalled.
 
 您將建立的封裝將包含先前建立的 專案範本 和 套件範本 。 由於我們將這兩個範本分組到 working\templates\ 資料夾，我們可以針對 .csproj 檔案使用 working 資料夾。
 
-在終端機中，瀏覽至 working 資料夾。 建立新專案，並將名稱設定為 *templatepack*，然後將輸出資料夾設定為目前的資料夾。
+在終端機中，瀏覽至 working 資料夾。 建立新專案，並將名稱設定為 `templatepack`，然後將輸出資料夾設定為目前的資料夾。
 
 ```bash=
 dotnet new console -n templatepack -o .
@@ -355,7 +355,7 @@ working
         └───.template.config
                 template.json
 ```
-將終端機移動至*working*資料夾，並執行 *dotnet pack* 命令，此命令會建置專案，並在working/bin/Debug資料夾內建立了NuGet套件，如下輸出：
+將終端機移動至*working*資料夾，並執行 `dotnet pack` 命令，此命令會建置專案，並在working/bin/Debug資料夾內建立了NuGet套件，如下輸出：
 ```
 \working> dotnet pack
 
@@ -367,12 +367,12 @@ Copyright (C) Microsoft Corporation. All rights reserved.
   templatepack -> C:\working\bin\Debug\netstandard2.0\templatepack.dll
   Successfully created package 'C:\working\bin\Debug\AdatumCorporation.Utility.Templates.1.0.0.nupkg'.  
 ```
-接著使用CLI來安裝範本套件 *dotnet new --install PATH_TO_NUPKG_FILE* 。
+接著使用CLI來安裝範本套件 `dotnet new --install PATH_TO_NUPKG_FILE` 。
 
 如果您將 NuGet 套件上傳至 NuGet Gallery，可以使用 dotnet new --install PACKAGEID 命令；其中 PACKAGEID 和 .csproj 檔案中的 \<PackageId> 設定相同。 此套件識別碼和 NuGet 套件識別碼相同。
     
 ### 卸載範本套件
-無論是使用 nupkg 檔案直接或 NuGet Gallery 來安裝範本套件，移除範本套件都是一樣的。 使用您想要解除安裝之範本的 \<PackageId>。 您可以透過執行 *dotnet new --uninstall* 命令來取得已安裝範本的清單。
+無論是使用 nupkg 檔案直接或 NuGet Gallery 來安裝範本套件，移除範本套件都是一樣的。 使用您想要解除安裝之範本的 \<PackageId>。 您可以透過執行 `dotnet new --uninstall` 命令來取得已安裝範本的清單。
     
 ```bash=
 $ dotnet new --uninstall
@@ -392,7 +392,7 @@ Currently installed items:
       dotnet new --uninstall AdatumCorporation.Utility.Templates
 ```
     
-執行 *dotnet new --uninstall AdatumCorporation.Utility.Templates* 以卸載範本套件。 此命令會輸出已卸載哪些範本套件的相關資訊。
+執行 `dotnet new --uninstall AdatumCorporation.Utility.Templates` 以卸載範本套件。 此命令會輸出已卸載哪些範本套件的相關資訊。
     
 
 ## 資料來源 
